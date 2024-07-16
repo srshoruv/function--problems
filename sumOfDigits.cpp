@@ -1,17 +1,20 @@
 #include <iostream>
 using namespace std;
 
+void sumDig(int a);
 
 int main(){
-    int a = 134;
-    int n = a;
-    int sum = 0;
-    int lastDig;
+    sumDig(123);
+    return 0;
+}
 
-    while (n > 0) {
-        lastDig = n % 10;
+void sumDig(int a){
+    int sum = 0;
+
+    while (a > 0) {
+        int lastDig = a % 10;
         sum = sum + lastDig;
-        n /= 10;
+        a /= 10;
     }
-    cout << sum;
+    cout << "The sum of the digits is: " << sum << endl;
 }
