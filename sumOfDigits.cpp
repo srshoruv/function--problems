@@ -4,12 +4,14 @@ using namespace std;
 
 int main(){
     int a = 134;
+    int n = a;
     int sum = 0;
-    while (a > 0){
-        int num = a % 10;
-        sum += num;
-        a / 10;
-        
-    } 
-    cout << a;
+    int lastDig;
+
+    while (n > 0) {
+        lastDig = n % 10;
+        sum = sum + lastDig;
+        n /= 10;
+    }
+    cout << sum;
 }
